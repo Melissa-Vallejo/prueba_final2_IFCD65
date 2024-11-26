@@ -1,4 +1,8 @@
 <template>
+
+    <div>
+      <button class="boton-estilo" @click="mostrarMensaje">Pulsa aquí</button>
+    </div>
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
@@ -35,8 +39,13 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
-}
+  },
+  methods:{
+    mostrarMensaje(){
+      alert("Ya le diste al botón");
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -55,4 +64,17 @@ li {
 a {
   color: #42b983;
 }
+
+.boton-estilo{
+  background-color: aquamarine;
+  border: none;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 4px;
+}
+
+  .boton-estilo:hover{
+    background-color:aquamarine;
+  }
+
 </style>
